@@ -1,0 +1,5 @@
+import {z} from 'zod';
+const text=z.string().max(6000);
+export const reviewSchema=z.object({candidate:text,headline:text,summary:text,score:z.number().min(0).max(100),categories:z.array(z.object({name:text,score:z.number().min(0).max(100),feedback:text})).min(4).max(6),strengths:z.array(text).max(8),improvements:z.array(z.object({priority:z.enum(['High','Medium','Low']),title:text,detail:text})).min(1).max(8),keywords:z.object({matched:z.array(text).max(25),missing:z.array(text).max(25)}),jobMatch:z.number().min(0).max(100).nullable(),rewrites:z.array(z.object({original:text,improved:text,reason:text})).max(6),improvedSummary:text,coverLetter:text,interviewQuestions:z.array(text).max(6)});
+export type Review=z.infer<typeof reviewSchema>;
+export const inputSchema=z.object({resume:z.string().trim().min(100,'Add at least 100 characters of resume text.').max(24000),jobDescription:z.string().trim().max(12000).default(''),role:z.string().trim().max(120).default(''),level:z.enum(['Student / Fresher','Early career','Experienced','Career change']),accessCode:z.string().max(200).default('')});

@@ -1,0 +1,22 @@
+import type {Review} from './schema';
+export const sampleResume=`ALEX MORGAN
+alex@example.com | Mumbai, India | linkedin.com/in/alex-example
+SUMMARY
+Computer science graduate interested in software engineering. Good at teamwork and programming.
+EDUCATION
+B.Tech Computer Science, Example University, 2022–2026. CGPA: 8.4/10.
+EXPERIENCE
+Software Engineering Intern, Example Labs, June–August 2025
+- Worked on a dashboard using React and Python.
+- Helped fix bugs and attended team meetings.
+- Created API endpoints and wrote unit tests.
+PROJECTS
+Campus Task Manager — React, FastAPI, PostgreSQL
+- Built a task management application with login, task assignment and deadline reminders.
+- Deployed the frontend on Vercel and backend on Render.
+SKILLS
+Python, JavaScript, React, SQL, Git, FastAPI, PostgreSQL
+ACTIVITIES
+Organised a coding workshop for 40 students.`;
+export const sampleJob='Junior Software Engineer: Build React interfaces and Python REST APIs. Work with PostgreSQL, Git and automated tests. Collaborate with designers and engineers. Familiarity with CI/CD and Docker is a plus.';
+export const demo:Review={candidate:'Alex Morgan',headline:'A strong foundation. Now show your impact.',summary:'Your technical foundation fits a junior software role. The biggest opportunity is to make your contribution clearer in the internship and project bullets.',score:72,categories:[{name:'Content & impact',score:65,feedback:'Explain what you built and how it helped. Add measurable results only when you can verify them.'},{name:'Clarity & language',score:76,feedback:'Replace vague phrases such as “worked on” with specific actions.'},{name:'ATS readability',score:84,feedback:'Standard headings and plain text are easy to parse. This review cannot verify the original visual layout.'},{name:'Skills relevance',score:82,feedback:'React, Python, SQL and testing align well with the target role.'},{name:'Completeness',score:70,feedback:'Add a portfolio link and more detail about internship responsibilities if available.'}],strengths:['Relevant full stack technologies.','Hands-on internship and deployment experience.','Clear education details and standard section headings.'],improvements:[{priority:'High',title:'Make your internship contribution specific',detail:'Name the dashboard features and API endpoints you owned. Add adoption or performance evidence only if you have records.'},{priority:'High',title:'Replace the generic summary',detail:'Use a concise summary connecting your internship, project and core technologies to the junior engineering role.'},{priority:'Medium',title:'Demonstrate testing depth',detail:'Mention which endpoints or behaviours your unit tests covered.'}],keywords:{matched:['React','Python','PostgreSQL','Git','REST APIs','unit tests'],missing:['CI/CD','Docker']},jobMatch:79,rewrites:[{original:'Worked on a dashboard using React and Python.',improved:'Contributed to a React dashboard backed by Python APIs during a software engineering internship.',reason:'Names the technology and context without inventing responsibility or results.'},{original:'Helped fix bugs and attended team meetings.',improved:'Collaborated with the engineering team to investigate and resolve application bugs.',reason:'Makes the action clearer without adding unsupported metrics.'}],improvedSummary:'Computer science graduate with internship experience building React interfaces and Python APIs. Developed and deployed a task management application with FastAPI and PostgreSQL. Seeking a junior software engineering role focused on reliable, practical web applications.',coverLetter:'Dear Hiring Team,\n\nI am applying for the Junior Software Engineer role. As a computer science graduate, I bring practical experience with React, Python, PostgreSQL and Git. During my internship at Example Labs, I contributed to a dashboard, created API endpoints and wrote unit tests.\n\nMy Campus Task Manager project includes login, task assignment and deadline reminders, with deployments on Vercel and Render. I would welcome the opportunity to contribute these skills while learning from your engineering team.\n\nThank you for your consideration.\nAlex Morgan',interviewQuestions:['Walk me through the architecture of your Campus Task Manager.','Which API endpoints did you build during your internship?','How did you test error cases and authentication?','Describe a bug you investigated and how you resolved it.']};
